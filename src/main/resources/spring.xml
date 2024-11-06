@@ -1,0 +1,30 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- default scope is singleton and by default
+	object is created only once and only a new reference is
+	created when we do context.getBean(id)-->
+	<!--Singleton object is created by default -->
+	<bean id="alien" class="com.pratik.demo.Alien" scope="prototype">
+		<!--Setter injection
+		<property name="age" value="21"></property>
+		<property name="lap" ref="laptop"/>
+		-->
+		
+		<!--Constructor Injection-->
+<!--		<constructor-arg value="21"/>-->
+<!--		<constructor-arg ref="laptop"/>-->
+<!--		<constructor-arg type="int" value="21"/>-->
+<!--		<constructor-arg type="com.pratik.demo.Laptop" ref="laptop"/>-->
+		<!--Using index for multiple arguments-->
+			<constructor-arg index="0" value="21"/>
+			<constructor-arg index="1" ref="laptop"/>
+		<!-- when property is object, we use ref-->
+		
+	</bean>
+	
+	<bean id="laptop" class="com.pratik.demo.Laptop">
+	</bean>
+</beans>
