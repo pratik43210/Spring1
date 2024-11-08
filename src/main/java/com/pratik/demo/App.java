@@ -21,6 +21,7 @@ public class App
 	    obj.code();
     	 
 //    	Desktop dt=context.getBean(Desktop.class);
+//    	Desktop dt1=context.getBean(Desktop.class);
 //    	Desktop dt=context.getBean("com2",Desktop.class);
 //    	dt.complie();
     	

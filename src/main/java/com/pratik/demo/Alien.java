@@ -2,11 +2,14 @@ package com.pratik.demo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 //import java.beans.ConstructorProperties;
 @Component
 public class Alien {
+	
+	@Value("25")
 	private int age;
 	
 //	@Autowired//adding autowire here is field injection
